@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EasyTechnologies</title>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--g:#25d366;--gb:#00ff88;--p:#d600ff;--c:#00e5ff;--go:#ffd600}
+html,body{font-family:'Hind Siliguri',sans-serif;background:transparent}
+.pg{max-width:820px;margin:0 auto}
+.tl{height:2px;background:linear-gradient(90deg,transparent,rgba(37,211,102,.7),#fff,rgba(37,211,102,.7),transparent);animation:gl 3s ease-in-out infinite}
+@keyframes gl{0%,100%{opacity:.6}50%{opacity:1}}
+.ci,.si,.br{background:transparent;position:relative}
+.ci,.si{padding:clamp(20px,4vw,44px) clamp(16px,5vw,52px)}
+.ch{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:clamp(18px,4vw,32px)}
+.lb{display:flex;align-items:center;gap:12px}
+.li{width:clamp(40px,7vw,52px);height:clamp(40px,7vw,52px);background:rgba(37,211,102,.12);border:1px solid rgba(37,211,102,.4);border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:clamp(18px,4vw,24px);animation:ip 3s ease-in-out infinite}
+@keyframes ip{0%,100%{box-shadow:0 0 18px rgba(37,211,102,.2)}50%{box-shadow:0 0 36px rgba(37,211,102,.5)}}
+.ln{color:#fff;font-size:clamp(16px,4vw,22px);font-weight:700;text-shadow:0 1px 12px rgba(0,0,0,.9)}
+.ln span{color:#25d366}
+.ls{color:rgba(255,255,255,.55);font-size:clamp(9px,2vw,11px);letter-spacing:2px}
+.hb{background:transparent;border:1px solid rgba(37,211,102,.4);border-radius:30px;padding:7px 16px;display:flex;align-items:center;gap:8px}
+.ld{width:8px;height:8px;background:#25d366;border-radius:50%;box-shadow:0 0 8px #25d366;animation:bl 1.2s ease-in-out infinite}
+@keyframes bl{0%,100%{opacity:1}50%{opacity:.15}}
+.bt{color:#25d366;font-size:clamp(11px,2.5vw,13px);font-weight:600}
+.hr{margin-bottom:clamp(16px,4vw,30px)}
+.ht{color:rgba(37,211,102,.9);font-size:clamp(9px,2vw,11px);letter-spacing:4px;font-weight:600;margin-bottom:8px;text-transform:uppercase}
+.htl{font-size:clamp(22px,5vw,42px);font-weight:700;color:#fff;line-height:1.15;margin-bottom:10px;text-shadow:0 2px 16px rgba(0,0,0,.8)}
+.htl .gr{color:#25d366;text-shadow:0 0 28px rgba(37,211,102,.7)}
+.hs{color:rgba(255,255,255,.6);font-size:clamp(12px,2.3vw,14px);line-height:1.75;max-width:480px}
+.dv{height:1px;background:linear-gradient(90deg,transparent,rgba(37,211,102,.35),transparent);margin-bottom:clamp(14px,3vw,26px)}
+.cc{display:flex;flex-direction:column;gap:clamp(10px,2vw,14px);margin-bottom:clamp(14px,3vw,24px)}
+.cd{background:transparent;border:1px solid rgba(37,211,102,.25);border-radius:16px;padding:clamp(14px,2.5vw,20px) clamp(14px,4vw,26px);display:flex;align-items:center;gap:clamp(12px,3vw,18px);transition:all .3s;position:relative;overflow:hidden;text-decoration:none}
+.cd::after{content:'';position:absolute;left:0;top:0;bottom:0;width:0;background:linear-gradient(90deg,rgba(37,211,102,.08),transparent);transition:width .4s}
+.cd:hover{border-color:rgba(37,211,102,.5);transform:translateX(4px)}
+.cd:hover::after{width:100%}
+.ci2{width:clamp(42px,7vw,56px);height:clamp(42px,7vw,56px);flex-shrink:0;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:clamp(19px,4vw,26px);z-index:1}
+.ig,.iw{background:transparent;border:1px solid rgba(37,211,102,.35)}
+.ih{background:transparent;border:1px solid rgba(255,120,50,.35)}
+.cb{flex:1;z-index:1;min-width:0}
+.cl{color:rgba(37,211,102,.8);font-size:clamp(9px,2vw,11px);letter-spacing:3px;font-weight:600;text-transform:uppercase;margin-bottom:3px}
+.ct{color:#fff;font-size:clamp(12px,2.5vw,14px);font-weight:600;margin-bottom:4px;text-shadow:0 1px 8px rgba(0,0,0,.8)}
+.cv{color:#25d366;font-size:clamp(14px,3.5vw,19px);font-weight:700;margin-bottom:2px;text-shadow:0 0 18px rgba(37,211,102,.6);text-decoration:none;display:block}
+.cv.or{color:#ff9542;text-shadow:0 0 18px rgba(255,120,50,.6)}
+.cd2{color:rgba(255,255,255,.45);font-size:clamp(10px,2vw,12px)}
+.cbtn{background:transparent;border:1px solid rgba(37,211,102,.4);color:#25d366;border-radius:28px;padding:clamp(8px,1.8vw,11px) clamp(12px,3vw,18px);font-size:clamp(11px,2vw,13px);font-weight:600;font-family:'Hind Siliguri',sans-serif;white-space:nowrap;flex-shrink:0;text-decoration:none;display:inline-flex;align-items:center;gap:6px;z-index:1;transition:all .25s;text-shadow:0 0 12px rgba(37,211,102,.5)}
+.cbtn.ob{border-color:rgba(255,120,50,.4);color:#ff9542;text-shadow:0 0 12px rgba(255,120,50,.5)}
+.cbtn:hover{background:rgba(37,211,102,.15);transform:translateY(-1px);box-shadow:0 4px 18px rgba(37,211,102,.3)}
+.cbtn.ob:hover{background:rgba(255,120,50,.15);box-shadow:0 4px 18px rgba(255,120,50,.3)}
+.cta{background:transparent;border:1px solid rgba(37,211,102,.3);border-radius:16px;padding:clamp(14px,3vw,22px) clamp(14px,4vw,26px);display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:clamp(12px,2.5vw,20px)}
+.ctt{color:#fff;font-size:clamp(13px,3vw,16px);font-weight:700;margin-bottom:3px;text-shadow:0 1px 10px rgba(0,0,0,.8)}
+.cts{color:rgba(255,255,255,.55);font-size:clamp(11px,2vw,13px)}
+.cbig{background:linear-gradient(90deg,#25d366,#1aad52);color:#fff;border:none;border-radius:50px;padding:clamp(11px,2.5vw,14px) clamp(20px,5vw,32px);font-size:clamp(13px,2.8vw,15px);font-weight:700;font-family:'Hind Siliguri',sans-serif;box-shadow:0 8px 32px rgba(37,211,102,.5);transition:all .25s;white-space:nowrap;flex-shrink:0;text-decoration:none;display:inline-block;position:relative;overflow:hidden}
+.cbig::before,.rb::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent);transform:translateX(-100%);animation:sh 2.5s infinite}
+@keyframes sh{0%{transform:translateX(-100%)}100%{transform:translateX(200%)}}
+.cbig:hover{transform:translateY(-2px);box-shadow:0 14px 44px rgba(37,211,102,.65)}
+.cmp{background:transparent;border:1px solid rgba(255,70,70,.35);border-radius:16px;padding:clamp(14px,3vw,20px) clamp(14px,4vw,26px);display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.cmt{color:#fff;font-size:clamp(13px,3vw,16px);font-weight:700;margin-bottom:3px;text-shadow:0 1px 10px rgba(0,0,0,.8)}
+.cms{color:rgba(255,255,255,.55);font-size:clamp(11px,2vw,13px)}
+.rb{background:linear-gradient(90deg,#ff4d4d,#cc1f1f);color:#fff;border:none;border-radius:50px;padding:clamp(11px,2.5vw,14px) clamp(20px,5vw,32px);font-size:clamp(13px,2.8vw,15px);font-weight:700;font-family:'Hind Siliguri',sans-serif;box-shadow:0 8px 32px rgba(255,60,60,.45);transition:all .25s;white-space:nowrap;flex-shrink:0;text-decoration:none;display:inline-block;position:relative;overflow:hidden}
+.rb:hover{transform:translateY(-2px);box-shadow:0 14px 44px rgba(255,60,60,.65)}
+.br{padding:clamp(20px,4vw,36px) clamp(16px,5vw,52px) clamp(14px,3vw,28px);text-align:center}
+.brd{width:100%;height:1px;background:linear-gradient(90deg,transparent,rgba(37,211,102,.3),rgba(0,229,255,.2),rgba(37,211,102,.3),transparent);margin-bottom:clamp(20px,4vw,34px)}
+.bbi{display:inline-block;background:linear-gradient(90deg,var(--gb),var(--c));-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-size:11px;font-weight:700;letter-spacing:4px;text-transform:uppercase;margin-bottom:10px}
+.btt{font-size:clamp(20px,5vw,30px);font-weight:700;color:var(--gb);text-shadow:0 0 28px rgba(0,255,136,.55);line-height:1.3}
+.btl{width:70px;height:3px;background:linear-gradient(90deg,var(--gb),var(--p));margin:12px auto 0;border-radius:2px}
+.fc{display:flex;flex-direction:column;gap:8px;margin-bottom:16px}
+.fcd{background:transparent;border:1px solid rgba(255,255,255,.15);border-radius:16px;padding:18px 20px;display:flex;align-items:center;gap:16px;transition:transform .3s,border-color .3s}
+.fcd:hover{transform:translateY(-3px);border-color:rgba(0,255,136,.3)}
+.fi{width:48px;height:48px;flex-shrink:0;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;background:transparent}
+.fig{border:1px solid rgba(0,255,136,.35)}
+.fip{border:1px solid rgba(214,0,255,.35)}
+.fic{border:1px solid rgba(0,229,255,.35)}
+.ft{flex:1}
+.fn{font-size:10px;font-weight:700;letter-spacing:2px;color:var(--gb);text-transform:uppercase;margin-bottom:3px}
+.fti{font-size:15px;font-weight:600;color:#fff;margin-bottom:2px;text-shadow:0 1px 8px rgba(0,0,0,.8)}
+.fd{font-size:13px;color:rgba(255,255,255,.6);line-height:1.5}
+.sl{text-align:center;font-size:11px;letter-spacing:3px;font-weight:700;color:rgba(255,255,255,.4);text-transform:uppercase;margin-bottom:18px}
+.svl{display:flex;flex-direction:column;gap:10px}
+.svc{background:transparent;border:1px solid rgba(255,255,255,.15);border-radius:20px;padding:24px;text-align:center;transition:transform .3s;position:relative;overflow:hidden}
+.svc::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;border-radius:20px 20px 0 0}
+.svc.tv::before{background:linear-gradient(90deg,var(--gb),var(--c))}
+.svc.mv::before{background:linear-gradient(90deg,var(--p),var(--go))}
+.svc:hover{transform:translateY(-4px)}
+.si2{font-size:44px;margin-bottom:10px;display:block}
+.svc.tv .si2{filter:drop-shadow(0 0 16px rgba(0,255,136,.7))}
+.svc.mv .si2{filter:drop-shadow(0 0 16px rgba(214,0,255,.7))}
+.sti{font-size:20px;font-weight:700;margin-bottom:6px}
+.svc.tv .sti{color:var(--gb);text-shadow:0 0 20px rgba(0,255,136,.5)}
+.svc.mv .sti{color:var(--p);text-shadow:0 0 20px rgba(214,0,255,.5)}
+.sd{font-size:13.5px;color:rgba(255,255,255,.65);line-height:1.65;margin-bottom:22px}
+.sd strong{color:rgba(255,255,255,.9)}
+.gb2{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 32px;border-radius:50px;font-family:'Hind Siliguri',sans-serif;font-size:15px;font-weight:600;text-decoration:none;position:relative;overflow:hidden;transition:transform .25s,box-shadow .25s;min-width:200px;background:transparent}
+.btv{border:1px solid rgba(0,255,136,.55);color:var(--gb);box-shadow:0 4px 24px rgba(0,255,136,.2);text-shadow:0 0 14px rgba(0,255,136,.7)}
+.btv:hover{box-shadow:0 8px 40px rgba(0,255,136,.45);transform:scale(1.04);background:rgba(0,255,136,.07)}
+.bmv{border:1px solid rgba(214,0,255,.55);color:#e070ff;box-shadow:0 4px 24px rgba(214,0,255,.2);text-shadow:0 0 14px rgba(214,0,255,.7)}
+.bmv:hover{box-shadow:0 8px 40px rgba(214,0,255,.45);transform:scale(1.04);background:rgba(214,0,255,.07)}
+.pd{display:inline-block;width:8px;height:8px;background:var(--gb);border-radius:50%;margin-right:4px;animation:pg 1.5s ease-in-out infinite}
+@keyframes pg{0%,100%{box-shadow:0 0 0 0 rgba(0,255,136,.6)}50%{box-shadow:0 0 0 6px rgba(0,255,136,0)}}
+.fb{background:transparent;border-top:1px solid rgba(37,211,102,.18);padding:clamp(12px,2.5vw,16px) clamp(16px,5vw,52px);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.fts{display:flex;flex-wrap:wrap;gap:8px}
+.ftg{background:transparent;border:1px solid rgba(37,211,102,.25);border-radius:20px;padding:5px 12px;color:rgba(37,211,102,.85);font-size:clamp(10px,2vw,12px);font-weight:500}
+.fr{color:rgba(255,255,255,.3);font-size:clamp(10px,2vw,12px);letter-spacing:1px}
+</style>
+</head>
+<body>
+<div class="pg">
+<div class="contact-section">
+<div class="tl"></div>
+<div class="ci">
+<div class="ch">
+<div class="lb">
+<div class="li">🔗</div>
+<div>
+<div class="ln">Easy<span>Technologies</span></div>
+<div class="ls">AmbariBazar CNG Station Road, Sunamganj</div>
+</div>
+</div>
+<div class="hb"><div class="ld"></div><span class="bt">সংযোগ চলছে</span></div>
+</div>
+<div class="hr">
+<div class="ht">যোগাযোগের জন্য</div>
+<div class="htl">আজই <span class="gr">সংযুক্ত</span> হন<br>আমাদের সাথে</div>
+<div class="hs">নতুন সংযোগ, সার্ভিস বা যেকোনো তথ্যের জন্য আমাদের সাথে যোগাযোগ করুন — আমরা সদা প্রস্তুত।</div>
+</div>
+<div class="dv"></div>
+<div class="cc">
+<div class="cd">
+<div class="ci2 ig">📞</div>
+<div class="cb">
+<div class="cl">সরাসরি কল করুন</div>
+<div class="ct">ইন্টারনেট সমস্যা? নতুন সংযোগ নিতে চান?</div>
+<a href="tel:01718898087" class="cv">০১৭১৮-৮৯৮০৮৭</a>
+<div class="cd2">নম্বরে ক্লিক করুন — সরাসরি কল চলে যাবে</div>
+</div>
+<a href="tel:01718898087" class="cbtn">📞 কল করুন</a>
+</div>
+<div class="cd">
+<div class="ci2 iw">💬</div>
+<div class="cb">
+<div class="cl">হোয়াটসঅ্যাপ</div>
+<div class="ct">কাস্টমার সমস্যা? মেসেজ দিন এখনই</div>
+<a href="https://wa.me/8801898383115" target="_blank" class="cv">০১৮৯৮-৩৮৩১১৫</a>
+<div class="cd2">নম্বরে ক্লিক করুন — সরাসরি WhatsApp খুলবে</div>
+</div>
+<a href="https://wa.me/8801898383115" target="_blank" class="cbtn">💬 মেসেজ করুন</a>
+</div>
+<div class="cd">
+<div class="ci2 ih">🔥</div>
+<div class="cb">
+<div class="cl">হট লাইন</div>
+<div class="ct">যেকোনো সমস্যায় সরাসরি কল করুন</div>
+<a href="tel:+8809617977666" class="cv or">09617977666</a>
+<div class="cd2">নম্বরে ক্লিক করুন — তাৎক্ষণিক কল চলে যাবে</div>
+</div>
+<a href="tel:+8809617977666" class="cbtn ob">🔥 কল করুন</a>
+</div>
+</div>
+<div class="cta" style="justify-content:space-between;align-items:center;margin-bottom:10px;">
+<div>
+<div class="ctt">💳 বিকাশে রিচার্জ করুন!</div>
+<div class="cts">সহজেই বিকাশের মাধ্যমে আপনার অ্যাকাউন্ট রিচার্জ করুন</div>
+</div>
+<button onclick="openBkash()" class="cbig" style="margin-left:auto;background:linear-gradient(90deg,#e2136e,#b00e57);box-shadow:0 8px 32px rgba(226,19,110,.5);cursor:pointer;border:none;font-family:'Hind Siliguri',sans-serif;">💳 রিচার্জ করুন →</button>
+</div>
+<div class="cta" style="justify-content:space-between;align-items:center;">
+<div>
+<div class="ctt">🚀 দেরি না করে এখনই শুরু করুন!</div>
+<div class="cts">নতুন সংযোগে বিশেষ ছাড় পাচ্ছেন এই মাসে</div>
+</div>
+<button onclick="openConn()" class="cbig" style="margin-left:auto;cursor:pointer;border:none;font-family:'Hind Siliguri',sans-serif;">📝 এখনই আবেদন করুন →</button>
+</div>
+<div class="cmp" style="justify-content:space-between;align-items:center;">
+<div>
+<div class="cmt">⚠️ কোনো সমস্যা হচ্ছে?</div>
+<div class="cms">আপনার অভিযোগ আমাদের জানান — আমরা দ্রুত সমাধান দেব</div>
+</div>
+<button onclick="openComp()" class="rb" style="margin-left:auto;cursor:pointer;border:none;font-family:'Hind Siliguri',sans-serif;">📋 অভিযোগ জানান →</button>
+</div>
+</div>
+</div>
+<div class="br">
+<div class="brd"></div>
+<div class="bbi">⚡ Premium Internet Service</div>
+<h2 class="btt">আমাদের সেবা কেন নেবেন?</h2>
+<div class="btl"></div>
+</div>
+<div class="services-section">
+<div class="si">
+<div class="fc">
+<div class="fcd">
+<div class="fi fig">🚀</div>
+<div class="ft">
+<div class="fn">01 — Speed</div>
+<div class="fti">সুপারফাস্ট স্পিড</div>
+<div class="fd">বাফারিংহীন স্ট্রিমিং এবং গতির নিশ্চয়তা<br><a href="https://fast.com" target="_blank" style="color:var(--gb);font-size:12px;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:4px;margin-top:5px">⚡ আপনার স্পিড চেক করুন →</a></div>
+</div>
+</div>
+<div class="fcd">
+<div class="fi fip">🛡️</div>
+<div class="ft">
+<div class="fn">02 — Support</div>
+<div class="fti">২৪/৭ সাপোর্ট</div>
+<div class="fd">আমাদের দক্ষ টিম সবসময় আপনার সেবায় নিয়োজিত</div>
+</div>
+</div>
+<div class="fcd">
+<div class="fi fic">💎</div>
+<div class="ft">
+<div class="fn">03 — Plans</div>
+<div class="fti">সাশ্রয়ী প্যাকেজ</div>
+<div class="fd">আপনার বাজেট অনুযায়ী সেরা সব ইন্টারনেট প্ল্যান</div>
+</div>
+</div>
+</div>
+<div class="sl">আমাদের সার্ভিস সমূহ</div>
+<div class="svl">
+<div class="svc tv">
+<span class="si2">📺</span>
+<div class="sti">লাইভ টিভি</div>
+<div class="sd">মাঠের উত্তেজনা এখন আপনার ডিভাইসে!<br>সরাসরি খেলা এবং পছন্দের সব টিভি চ্যানেল উপভোগ করুন।<br><strong>হাই-স্পিড ইন্টারনেটে একদম বাফারিং ছাড়া।</strong></div>
+<a href="http://ott.11plus.live/" target="_blank" class="gb2 btv"><span class="pd"></span>📡 লাইভ টিভি দেখুন</a>
+</div>
+<div class="svc mv">
+<span class="si2">🎬</span>
+<div class="sti">মুভি টাইম</div>
+<div class="sd">বোরিং সময়কে বিদায় জানান!<br>লেটেস্ট সব ব্লকবাস্টার সিনেমা এবং ওয়েব সিরিজ দেখুন।<br><strong>একদম বাফারিং ছাড়া — পছন্দের মুভি এখনই!</strong></div>
+<a href="http://timepassbd.live/" target="_blank" class="gb2 bmv">🎥 মুভি দেখুন</a>
+</div>
+</div>
+</div>
+<div class="fb">
+<div class="fts">
+<span class="ftg">⚡ দ্রুত সংযোগ</span>
+<span class="ftg">🛡️ নিরাপদ নেটওয়ার্ক</span>
+<span class="ftg">📡 ২৪/৭ সাপোর্ট</span>
+</div>
+<div class="fr">EasyTechnologies © 2025</div>
+</div>
+</div>
+</div>
+
+<!-- ===== New Connection Modal ===== -->
+<div id="conn-overlay" onclick="if(event.target===this)closeConn()" style="display:none;position:fixed;inset:0;z-index:9998;background:transparent;align-items:flex-start;justify-content:center;padding:12px;overflow-y:auto">
+<div style="position:relative;width:100%;max-width:480px;margin:10px auto;animation:bkIn .3s ease both;position:relative">
+<button onclick="closeConn()" style="position:absolute;top:10px;right:10px;z-index:10;background:rgba(255,255,255,.15);border:none;color:#fff;width:30px;height:30px;border-radius:50%;font-size:16px;cursor:pointer;backdrop-filter:blur(4px)">✕</button>
+<div style="background:#09151c;border:1px solid rgba(6,182,212,0.2);border-radius:24px;overflow:hidden;font-family:'Hind Siliguri',sans-serif;color:#e8f4f8">
+  <div style="width:100%;padding:1.5rem 1rem 2rem;background:radial-gradient(ellipse at 20% 50%,rgba(6,182,212,.12) 0%,transparent 60%),linear-gradient(180deg,#030d12 0%,#051218 100%);text-align:center;position:relative">
+    <div style="display:inline-flex;align-items:center;gap:.4rem;background:rgba(6,182,212,.1);border:1px solid rgba(6,182,212,.25);color:#67e8f9;font-size:.72rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:.4rem 1rem;border-radius:100px;margin-bottom:1rem">✨ ISP — NEW CONNECTION</div>
+    <div style="font-family:'Tiro Bangla',serif;font-size:clamp(1.4rem,4vw,2rem);color:#fff;line-height:1.35">নতুন সংযোগ নিন,<br><span style="color:#06b6d4;text-shadow:0 0 30px rgba(6,182,212,.7);font-style:italic">হাই-স্পিড</span> ইন্টারনেট পান</div>
+    <div style="color:#7eaab8;font-size:.85rem;margin-top:.6rem">আবেদন করুন, আমাদের প্রতিনিধি শীঘ্রই যোগাযোগ করবে</div>
+    <div style="position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:80%;height:1px;background:linear-gradient(90deg,transparent,rgba(6,182,212,.5),transparent)"></div>
+  </div>
+  <div style="padding:1.2rem 1.2rem 1.8rem;background:#09151c">
+    <div id="conn-form-content">
+      <div style="text-align:center;margin-bottom:1.8rem;padding-bottom:1.5rem;border-bottom:1px solid rgba(6,182,212,.12)">
+        <div style="width:64px;height:64px;border-radius:50%;background:rgba(6,182,212,.1);border:1.5px solid rgba(6,182,212,.3);display:flex;align-items:center;justify-content:center;font-size:1.8rem;margin:0 auto 1rem">📡</div>
+        <h2 style="font-size:1.1rem;font-weight:700;color:#e8f4f8;margin-bottom:.4rem">নতুন সংযোগের জন্য আবেদন করুন</h2>
+        <p style="font-size:.82rem;color:#7eaab8;line-height:1.6">আমাদের হাই-স্পিড ইন্টারনেট পেতে নিচের তথ্য পূরণ করুন।</p>
+      </div>
+      <div style="font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#06b6d4;margin-bottom:.8rem;margin-top:.5rem;display:flex;align-items:center;gap:.6rem">ব্যক্তিগত তথ্য<span style="flex:1;height:1px;background:linear-gradient(90deg,rgba(6,182,212,.3),transparent)"></span></div>
+      <div style="margin-bottom:1rem"><label style="display:block;font-size:.8rem;font-weight:600;color:#7eaab8;margin-bottom:.35rem">গ্রাহকের নাম <span style="color:#f87171">*</span></label><input id="cn-name" type="text" placeholder="আপনার পুরো নাম লিখুন" style="width:100%;border:1.5px solid rgba(6,182,212,.12);border-radius:12px;padding:.7rem 1rem;font-family:'Hind Siliguri',sans-serif;font-size:.9rem;color:#e8f4f8;background:rgba(6,182,212,.03);outline:none"/></div>
+      <div style="margin-bottom:1rem"><label style="display:block;font-size:.8rem;font-weight:600;color:#7eaab8;margin-bottom:.35rem">মোবাইল নম্বর <span style="color:#f87171">*</span></label><input id="cn-phone" type="tel" placeholder="০১XXXXXXXXX" style="width:100%;border:1.5px solid rgba(6,182,212,.12);border-radius:12px;padding:.7rem 1rem;font-family:'Hind Siliguri',sans-serif;font-size:.9rem;color:#e8f4f8;background:rgba(6,182,212,.03);outline:none"/></div>
+      <div style="margin-bottom:1.2rem"><label style="display:block;font-size:.8rem;font-weight:600;color:#7eaab8;margin-bottom:.35rem">আপনার ঠিকানা <span style="color:#f87171">*</span></label><input id="cn-addr" type="text" placeholder="বাড়ি নং, রাস্তা, এলাকা লিখুন" style="width:100%;border:1.5px solid rgba(6,182,212,.12);border-radius:12px;padding:.7rem 1rem;font-family:'Hind Siliguri',sans-serif;font-size:.9rem;color:#e8f4f8;background:rgba(6,182,212,.03);outline:none"/></div>
+      <div style="font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#06b6d4;margin-bottom:.8rem;display:flex;align-items:center;gap:.6rem">প্যাকেজ নির্বাচন করুন <span style="color:#f87171">*</span><span style="flex:1;height:1px;background:linear-gradient(90deg,rgba(6,182,212,.3),transparent)"></span></div>
+      <div id="cn-pkgs" style="display:flex;flex-direction:column;gap:.45rem;margin-bottom:1.2rem">
+        <div class="cpkg" onclick="cselPkg(this,'Turbo — ২৫ এমবিপিএস — ৬০০ টাকা')" style="display:flex;align-items:center;gap:.7rem;padding:.75rem 1rem;border:1.5px solid rgba(6,182,212,.12);border-radius:12px;cursor:pointer;background:rgba(6,182,212,.02);transition:all .2s"><div class="cpkg-dot" style="width:18px;height:18px;border:2px solid rgba(255,255,255,.1);border-radius:50%;flex-shrink:0"></div><div style="flex:1"><div style="font-size:.88rem;font-weight:700;color:#e8f4f8">⚡ Turbo</div><div style="font-size:.74rem;color:#7eaab8">২৫ এমবিপিএস</div></div><div style="font-size:.83rem;font-weight:700;color:#06b6d4;background:rgba(6,182,212,.1);border:1px solid rgba(6,182,212,.2);padding:.2rem .6rem;border-radius:20px">৬০০ টাকা</div></div>
+        <div class="cpkg" onclick="cselPkg(this,'Boost — ৩৫ এমবিপিএস — ৭০০ টাকা')" style="display:flex;align-items:center;gap:.7rem;padding:.75rem 1rem;border:1.5px solid rgba(6,182,212,.12);border-radius:12px;cursor:pointer;background:rgba(6,182,212,.02);transition:all .2s"><div class="cpkg-dot" style="width:18px;height:18px;border:2px solid rgba(255,255,255,.1);border-radius:50%;flex-shrink:0"></div><div style="flex:1"><div style="font-size:.88rem;font-weight:700;color:#e8f4f8">🚀 Boost</div><div style="font-size:.74rem;color:#7eaab8">৩৫ এমবিপিএস</div></div><div style="font-size:.83rem;font-weight:700;color:#06b6d4;background:rgba(6,182,212,.1);border:1px solid rgba(6,182,212,.2);padding:.2rem .6rem;border-radius:20px">৭০০ টাকা</div></div>
+        <div class="cpkg" onclick="cselPkg(this,'Ultra — ৪৫ এমবিপিএস — ৯০০ টাকা')" style="display:flex;align-items:center;gap:.7rem;padding:.75rem 1rem;border:1.5px solid rgba(6,182,212,.12);border-radius:12px;cursor:pointer;background:rgba(6,182,212,.02);transition:all .2s"><div class="cpkg-dot" style="width:18px;height:18px;border:2px solid rgba(255,255,255,.1);border-radius:50%;flex-shrink:0"></div><div style="flex:1"><div style="font-size:.88rem;font-weight:700;color:#e8f4f8">💎 Ultra</div><div style="font-size:.74rem;color:#7eaab8">৪৫ এমবিপিএস</div></div><div style="font-size:.83rem;font-weight:700;color:#06b6d4;background:rgba(6,182,212,.1);border:1px solid rgba(6,182,212,.2);padding:.2rem .6rem;border-radius:20px">৯০০ টাকা</div></div>
+        <div class="cpkg" onclick="cselPkg(this,'Xpress — ৫৫ এমবিপিএস — ১০০০ টাকা')" style="display:flex;align-items:center;gap:.7rem;padding:.75rem 1rem;border:1.5px solid rgba(6,182,212,.12);border-radius:12px;cursor:pointer;background:rgba(6,182,212,.02);transition:all .2s"><div class="cpkg-dot" style="width:18px;height:18px;border:2px solid rgba(255,255,255,.1);border-radius:50%;flex-shrink:0"></div><div style="flex:1"><div style="font-size:.88rem;font-weight:700;color:#e8f4f8">🔥 Xpress</div><div style="font-size:.74rem;color:#7eaab8">৫৫ এমবিপিএস</div></div><div style="font-size:.83rem;font-weight:700;color:#06b6d4;background:rgba(6,182,212,.1);border:1px solid rgba(6,182,212,.2);padding:.2rem .6rem;border-radius:20px">১০০০ টাকা</div></div>
+        <div class="cpkg" onclick="cselPkg(this,'Prime — ৬৫ এমবিপিএস — ১২০০ টাকা')" style="display:flex;align-items:center;gap:.7rem;padding:.75rem 1rem;border:1.5px solid rgba(6,182,212,.12);border-radius:12px;cursor:pointer;background:rgba(6,182,212,.02);transition:all .2s"><div class="cpkg-dot" style="width:18px;height:18px;border:2px solid rgba(255,255,255,.1);border-radius:50%;flex-shrink:0"></div><div style="flex:1"><div style="font-size:.88rem;font-weight:700;color:#e8f4f8">👑 Prime</div><div style="font-size:.74rem;color:#7eaab8">৬৫ এমবিপিএস</div></div><div style="font-size:.83rem;font-weight:700;color:#06b6d4;background:rgba(6,182,212,.1);border:1px solid rgba(6,182,212,.2);padding:.2rem .6rem;border-radius:20px">১২০০ টাকা</div></div>
+        <div class="cpkg" onclick="cselPkg(this,'Mega — ৮০ এমবিপিএস — ১৫০০ টাকা')" style="display:flex;align-items:center;gap:.7rem;padding:.75rem 1rem;border:1.5px solid rgba(6,182,212,.12);border-radius:12px;cursor:pointer;background:rgba(6,182,212,.02);transition:all .2s"><div class="cpkg-dot" style="width:18px;height:18px;border:2px solid rgba(255,255,255,.1);border-radius:50%;flex-shrink:0"></div><div style="flex:1"><div style="font-size:.88rem;font-weight:700;color:#e8f4f8">🌟 Mega</div><div style="font-size:.74rem;color:#7eaab8">৮০ এমবিপিএস</div></div><div style="font-size:.83rem;font-weight:700;color:#06b6d4;background:rgba(6,182,212,.1);border:1px solid rgba(6,182,212,.2);padding:.2rem .6rem;border-radius:20px">১৫০০ টাকা</div></div>
+        <div class="cpkg" onclick="cselPkg(this,'Super — ১০০ এমবিপিএস — ২০০০ টাকা')" style="display:flex;align-items:center;gap:.7rem;padding:.75rem 1rem;border:1.5px solid rgba(6,182,212,.12);border-radius:12px;cursor:pointer;background:rgba(6,182,212,.02);transition:all .2s"><div class="cpkg-dot" style="width:18px;height:18px;border:2px solid rgba(255,255,255,.1);border-radius:50%;flex-shrink:0"></div><div style="flex:1"><div style="font-size:.88rem;font-weight:700;color:#e8f4f8">🏆 Super</div><div style="font-size:.74rem;color:#7eaab8">১০০ এমবিপিএস</div></div><div style="font-size:.83rem;font-weight:700;color:#06b6d4;background:rgba(6,182,212,.1);border:1px solid rgba(6,182,212,.2);padding:.2rem .6rem;border-radius:20px">২০০০ টাকা</div></div>
+      </div>
+      <div style="margin-bottom:1.2rem"><label style="display:block;font-size:.8rem;font-weight:600;color:#7eaab8;margin-bottom:.35rem">অন্যান্য তথ্য <span style="color:#7eaab8;font-weight:400">(যদি থাকে)</span></label><textarea id="cn-extra" placeholder="অতিরিক্ত কোনো তথ্য থাকলে এখানে লিখুন..." style="width:100%;border:1.5px solid rgba(6,182,212,.12);border-radius:12px;padding:.7rem 1rem;font-family:'Hind Siliguri',sans-serif;font-size:.9rem;color:#e8f4f8;background:rgba(6,182,212,.03);outline:none;resize:vertical;min-height:80px"></textarea></div>
+      <button id="cn-btn" onclick="connSubmit()" style="width:100%;padding:1rem;background:linear-gradient(135deg,#06b6d4,#0891b2);color:#fff;border:none;border-radius:14px;font-family:'Hind Siliguri',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;box-shadow:0 4px 20px rgba(6,182,212,.35)">আবেদন জমা দিন →</button>
+      <div id="cn-toast" style="display:none;margin-top:10px;padding:11px 14px;border-radius:10px;font-size:13px;color:#fff;font-family:'Hind Siliguri',sans-serif"></div>
+    </div>
+    <div id="conn-success" style="display:none;text-align:center;padding:2.5rem 1rem">
+      <div style="width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,#34d399,#059669);display:flex;align-items:center;justify-content:center;font-size:2rem;margin:0 auto 1.2rem;box-shadow:0 8px 30px rgba(52,211,153,.4)">✓</div>
+      <h3 style="font-size:1.3rem;font-weight:700;color:#e8f4f8;margin-bottom:.5rem">আবেদন জমা হয়েছে!</h3>
+      <p style="color:#7eaab8;font-size:.9rem;line-height:1.6;margin-bottom:1.2rem">আমাদের প্রতিনিধি শীঘ্রই আপনার সাথে যোগাযোগ করবে।</p>
+      <div style="background:rgba(52,211,153,.07);border:1.5px solid rgba(52,211,153,.25);border-radius:14px;padding:1rem;font-size:.87rem;color:#6ee7b7;font-weight:600;margin-bottom:1.5rem">🎉 ধন্যবাদ! আপনার মোবাইল নম্বরে শীঘ্রই কল আসবে।</div>
+      <button onclick="connReset()" style="padding:.75rem 2rem;background:linear-gradient(135deg,#06b6d4,#0891b2);color:#fff;border:none;border-radius:12px;font-family:'Hind Siliguri',sans-serif;font-size:.95rem;font-weight:700;cursor:pointer">নতুন আবেদন করুন</button>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<!-- ===== Complaint Modal ===== -->
+<div id="comp-overlay" onclick="if(event.target===this)closeComp()" style="display:none;position:fixed;inset:0;z-index:9998;background:transparent;align-items:flex-start;justify-content:center;padding:12px;overflow-y:auto">
+<div style="position:relative;width:100%;max-width:480px;margin:10px auto;animation:bkIn .3s ease both">
+<button onclick="closeComp()" style="position:absolute;top:10px;right:10px;z-index:10;background:rgba(255,255,255,.15);border:none;color:#fff;width:30px;height:30px;border-radius:50%;font-size:16px;cursor:pointer;backdrop-filter:blur(4px)">✕</button>
+<div style="background:#13131f;border:1px solid rgba(255,255,255,.08);border-radius:20px;overflow:hidden;font-family:'Hind Siliguri',sans-serif;color:#f0f0f5">
+  <div style="width:100%;padding:1.5rem 1rem 2rem;background:linear-gradient(180deg,#1a0a0a 0%,#0d0d18 100%);text-align:center;position:relative">
+    <div style="display:inline-flex;align-items:center;gap:.5rem;background:rgba(229,62,62,.12);border:1px solid rgba(229,62,62,.3);color:#fc8181;font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:.4rem 1rem;border-radius:100px;margin-bottom:1.2rem">🔴 SUPPORT CENTER</div>
+    <div style="font-family:'Tiro Bangla',serif;font-size:clamp(1.4rem,4vw,2rem);color:#fff;line-height:1.3">অভিযোগ করুন, দ্রুত পান<br><span style="color:#e53e3e;text-shadow:0 0 30px rgba(229,62,62,.6);font-style:italic">সমাধান</span></div>
+    <div style="color:#8888aa;font-size:.85rem;margin-top:.6rem">আমাদের প্রতিনিধি আপনার সমস্যা দ্রুত সমাধান করবে</div>
+    <div style="position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:80%;height:1px;background:linear-gradient(90deg,transparent,rgba(229,62,62,.5),transparent)"></div>
+  </div>
+  <div style="padding:1.2rem 1.2rem 1.8rem">
+    <div id="comp-form-content">
+      <div style="text-align:center;margin-bottom:1.8rem;padding-bottom:1.5rem;border-bottom:1px solid rgba(255,255,255,.08)">
+        <div style="width:64px;height:64px;border-radius:50%;background:rgba(229,62,62,.1);border:1.5px solid rgba(229,62,62,.3);display:flex;align-items:center;justify-content:center;font-size:1.8rem;margin:0 auto 1rem">📋</div>
+        <h2 style="font-size:1.1rem;font-weight:700;color:#f0f0f5;margin-bottom:.4rem">অভিযোগ / সমস্যা জানান</h2>
+        <p style="font-size:.82rem;color:#8888aa;line-height:1.6">কোনো সমস্যা থাকলে নিচের ফর্মটি পূরণ করুন।</p>
+      </div>
+      <div style="font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#e53e3e;margin-bottom:.8rem;display:flex;align-items:center;gap:.6rem">ব্যক্তিগত তথ্য<span style="flex:1;height:1px;background:linear-gradient(90deg,rgba(229,62,62,.3),transparent)"></span></div>
+      <div style="margin-bottom:1rem"><label style="display:block;font-size:.8rem;font-weight:600;color:#8888aa;margin-bottom:.35rem">কাস্টমারের নাম <span style="color:#e53e3e">*</span></label><input id="cp-name" type="text" placeholder="আপনার পুরো নাম লিখুন" style="width:100%;border:1.5px solid rgba(255,255,255,.08);border-radius:12px;padding:.7rem 1rem;font-family:'Hind Siliguri',sans-serif;font-size:.9rem;color:#f0f0f5;background:rgba(255,255,255,.03);outline:none"/></div>
+      <div style="margin-bottom:1rem"><label style="display:block;font-size:.8rem;font-weight:600;color:#8888aa;margin-bottom:.35rem">কাস্টমার আইডি <span style="color:#e53e3e">*</span></label><input id="cp-id" type="text" placeholder="আপনার কাস্টমার আইডি লিখুন" style="width:100%;border:1.5px solid rgba(255,255,255,.08);border-radius:12px;padding:.7rem 1rem;font-family:'Hind Siliguri',sans-serif;font-size:.9rem;color:#f0f0f5;background:rgba(255,255,255,.03);outline:none"/></div>
+      <div style="margin-bottom:1.2rem"><label style="display:block;font-size:.8rem;font-weight:600;color:#8888aa;margin-bottom:.35rem">মোবাইল নম্বর <span style="color:#e53e3e">*</span></label><input id="cp-phone" type="tel" placeholder="০১XXXXXXXXX" style="width:100%;border:1.5px solid rgba(255,255,255,.08);border-radius:12px;padding:.7rem 1rem;font-family:'Hind Siliguri',sans-serif;font-size:.9rem;color:#f0f0f5;background:rgba(255,255,255,.03);outline:none"/></div>
+      <div style="font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#e53e3e;margin-bottom:.8rem;display:flex;align-items:center;gap:.6rem">সমস্যা নির্বাচন করুন<span style="flex:1;height:1px;background:linear-gradient(90deg,rgba(229,62,62,.3),transparent)"></span></div>
+      <div style="display:flex;flex-direction:column;gap:.5rem;margin-bottom:1.2rem">
+        <div class="copt" onclick="ctoggle(this,'অনু (ONU) তে লাল বাতি জ্বলছে')" style="display:flex;align-items:center;gap:.7rem;padding:.75rem 1rem;border:1.5px solid rgba(255,255,255,.08);border-radius:12px;cursor:pointer;background:rgba(255,255,255,.02);transition:all .2s"><div class="copt-check" style="width:20px;height:20px;border:2px solid rgba(255,255,255,.15);border-radius:6px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:.7rem;color:#fff"></div><span style="font-size:1rem">🔴</span><span style="font-size:.86rem;color:#f0f0f5">(১) অনু (ONU) তে লাল বাতি জ্বলছে</span></div>
+        <div class="copt" onclick="ctoggle(this,'অনুতে সব বাতি ঠিক আছে কিন্তু ইন্টারনেট নেই')" style="display:flex;align-items:center;gap:.7rem;padding:.75rem 1rem;border:1.5px solid rgba(255,255,255,.08);border-radius:12px;cursor:pointer;background:rgba(255,255,255,.02);transition:all .2s"><div class="copt-check" style="width:20px;height:20px;border:2px solid rgba(255,255,255,.15);border-radius:6px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:.7rem;color:#fff"></div><span style="font-size:1rem">📶</span><span style="font-size:.86rem;color:#f0f0f5">(২) অনুতে সব বাতি ঠিক আছে কিন্তু ইন্টারনেট নেই</span></div>
+        <div class="copt" onclick="ctoggle(this,'ইন্টারনেটের গতি অনেক কম (Slow Speed)')" style="display:flex;align-items:center;gap:.7rem;padding:.75rem 1rem;border:1.5px solid rgba(255,255,255,.08);border-radius:12px;cursor:pointer;background:rgba(255,255,255,.02);transition:all .2s"><div class="copt-check" style="width:20px;height:20px;border:2px solid rgba(255,255,255,.15);border-radius:6px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:.7rem;color:#fff"></div><span style="font-size:1rem">🐢</span><span style="font-size:.86rem;color:#f0f0f5">(৩) ইন্টারনেটের গতি অনেক কম (Slow Speed)</span></div>
+        <div class="copt" onclick="ctoggle(this,'লাইন বারবার আসা-যাওয়া করছে')" style="display:flex;align-items:center;gap:.7rem;padding:.75rem 1rem;border:1.5px solid rgba(255,255,255,.08);border-radius:12px;cursor:pointer;background:rgba(255,255,255,.02);transition:all .2s"><div class="copt-check" style="width:20px;height:20px;border:2px solid rgba(255,255,255,.15);border-radius:6px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:.7rem;color:#fff"></div><span style="font-size:1rem">⚡</span><span style="font-size:.86rem;color:#f0f0f5">(৪) লাইন বারবার আসা-যাওয়া করছে</span></div>
+        <div class="copt" onclick="ctoggle(this,'বিল পরিশোধ বা পেমেন্ট সংক্রান্ত সমস্যা')" style="display:flex;align-items:center;gap:.7rem;padding:.75rem 1rem;border:1.5px solid rgba(255,255,255,.08);border-radius:12px;cursor:pointer;background:rgba(255,255,255,.02);transition:all .2s"><div class="copt-check" style="width:20px;height:20px;border:2px solid rgba(255,255,255,.15);border-radius:6px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:.7rem;color:#fff"></div><span style="font-size:1rem">💳</span><span style="font-size:.86rem;color:#f0f0f5">(৫) বিল পরিশোধ বা পেমেন্ট সংক্রান্ত সমস্যা</span></div>
+      </div>
+      <div style="margin-bottom:1.2rem"><label style="display:block;font-size:.8rem;font-weight:600;color:#8888aa;margin-bottom:.35rem">অন্যান্য তথ্য <span style="color:#8888aa;font-weight:400">(যদি থাকে)</span></label><textarea id="cp-extra" placeholder="অতিরিক্ত কোনো তথ্য থাকলে এখানে লিখুন..." style="width:100%;border:1.5px solid rgba(255,255,255,.08);border-radius:12px;padding:.7rem 1rem;font-family:'Hind Siliguri',sans-serif;font-size:.9rem;color:#f0f0f5;background:rgba(255,255,255,.03);outline:none;resize:vertical;min-height:80px"></textarea></div>
+      <button id="cp-btn" onclick="compSubmit()" style="width:100%;padding:1rem;background:linear-gradient(135deg,#e53e3e,#c53030);color:#fff;border:none;border-radius:14px;font-family:'Hind Siliguri',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;box-shadow:0 4px 20px rgba(229,62,62,.35)">অভিযোগ জমা দিন →</button>
+      <div id="cp-toast" style="display:none;margin-top:10px;padding:11px 14px;border-radius:10px;font-size:13px;color:#fff;font-family:'Hind Siliguri',sans-serif"></div>
+    </div>
+    <div id="comp-success" style="display:none;text-align:center;padding:2.5rem 1rem">
+      <div style="width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,#48bb78,#2f855a);display:flex;align-items:center;justify-content:center;font-size:2rem;margin:0 auto 1.2rem;box-shadow:0 8px 30px rgba(72,187,120,.4)">✓</div>
+      <h3 style="font-size:1.3rem;font-weight:700;color:#f0f0f5;margin-bottom:.5rem">অভিযোগ জমা হয়েছে!</h3>
+      <p style="color:#8888aa;font-size:.9rem;line-height:1.6;margin-bottom:1.2rem">আমাদের প্রতিনিধি শীঘ্রই আপনার সাথে যোগাযোগ করবে।</p>
+      <div style="background:rgba(72,187,120,.08);border:1.5px solid rgba(72,187,120,.3);border-radius:14px;padding:1rem;font-size:.87rem;color:#68d391;font-weight:600;margin-bottom:1.5rem">🎫 ধন্যবাদ! আপনার মোবাইল নম্বরে শীঘ্রই কল আসবে।</div>
+      <button onclick="compReset()" style="padding:.75rem 2rem;background:linear-gradient(135deg,#e53e3e,#c53030);color:#fff;border:none;border-radius:12px;font-family:'Hind Siliguri',sans-serif;font-size:.95rem;font-weight:700;cursor:pointer">নতুন অভিযোগ করুন</button>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<style>
+#conn-overlay.open,#comp-overlay.open{display:flex!important}
+.cpkg.sel{border-color:rgba(6,182,212,.5)!important;background:rgba(6,182,212,.06)!important}
+.cpkg.sel .cpkg-dot{border-color:#06b6d4!important;background:#06b6d4;box-shadow:0 0 10px rgba(6,182,212,.4)}
+.copt.sel{border-color:rgba(229,62,62,.5)!important;background:rgba(229,62,62,.06)!important}
+.copt.sel .copt-check{background:#e53e3e!important;border-color:#e53e3e!important}
+</style>
+
+<script>
+// Connection modal
+let cnPkg='';
+function openConn(){document.getElementById('conn-overlay').classList.add('open');document.body.style.overflow='hidden'}
+function closeConn(){document.getElementById('conn-overlay').classList.remove('open');document.body.style.overflow=''}
+function cselPkg(el,val){document.querySelectorAll('.cpkg').forEach(p=>p.classList.remove('sel'));el.classList.add('sel');cnPkg=val}
+async function connSubmit(){
+  const name=document.getElementById('cn-name').value.trim(),phone=document.getElementById('cn-phone').value.trim(),addr=document.getElementById('cn-addr').value.trim(),extra=document.getElementById('cn-extra').value.trim();
+  if(!name||!phone||!addr){cnToast('⚠️ নাম, মোবাইল ও ঠিকানা পূরণ করুন।',true);return}
+  if(!cnPkg){cnToast('⚠️ একটি প্যাকেজ নির্বাচন করুন।',true);return}
+  const btn=document.getElementById('cn-btn');btn.disabled=true;btn.textContent='জমা হচ্ছে...';
+  const BOT='8729976925:AAEQOdLz6vFBrTx4aonUm-nx1FWfcnfXf80',CID='-1003717136002';
+  try{
+    const r=await fetch(`https://api.telegram.org/bot${BOT}/sendMessage`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({chat_id:CID,text:`🌐 EasyTechnologies — নতুন সংযোগ আবেদন!\n\n👤 নাম: ${name}\n📞 মোবাইল: ${phone}\n🏠 ঠিকানা: ${addr}\n\n📦 প্যাকেজ: ${cnPkg}\n\n${extra?'📝 অতিরিক্ত:\n'+extra:''}`})});
+    if(!(await r.json()).ok)throw new Error();
+    document.getElementById('conn-form-content').style.display='none';
+    document.getElementById('conn-success').style.display='block';
+  }catch(e){cnToast('❌ সমস্যা হয়েছে, আবার চেষ্টা করুন।',true);btn.disabled=false;btn.textContent='আবেদন জমা দিন →'}
+}
+function cnToast(msg,err){const t=document.getElementById('cn-toast');t.style.display='block';t.style.background=err?'#b91c1c':'#1a7a4a';t.textContent=msg;setTimeout(()=>t.style.display='none',4000)}
+function connReset(){document.getElementById('cn-name').value='';document.getElementById('cn-phone').value='';document.getElementById('cn-addr').value='';document.getElementById('cn-extra').value='';cnPkg='';document.querySelectorAll('.cpkg').forEach(p=>p.classList.remove('sel'));document.getElementById('conn-form-content').style.display='';document.getElementById('conn-success').style.display='none';document.getElementById('cn-btn').disabled=false;document.getElementById('cn-btn').textContent='আবেদন জমা দিন →'}
+
+// Complaint modal
+const cpSel=new Set();
+function openComp(){document.getElementById('comp-overlay').classList.add('open');document.body.style.overflow='hidden'}
+function closeComp(){document.getElementById('comp-overlay').classList.remove('open');document.body.style.overflow=''}
+function ctoggle(el,val){if(cpSel.has(val)){cpSel.delete(val);el.classList.remove('sel');el.querySelector('.copt-check').textContent=''}else{cpSel.add(val);el.classList.add('sel');el.querySelector('.copt-check').textContent='✓'}}
+async function compSubmit(){
+  const name=document.getElementById('cp-name').value.trim(),id=document.getElementById('cp-id').value.trim(),phone=document.getElementById('cp-phone').value.trim(),extra=document.getElementById('cp-extra').value.trim();
+  if(!name||!id||!phone){cpToast('⚠️ নাম, আইডি ও মোবাইল পূরণ করুন।',true);return}
+  if(cpSel.size===0){cpToast('⚠️ অন্তত একটি সমস্যা নির্বাচন করুন।',true);return}
+  const btn=document.getElementById('cp-btn');btn.disabled=true;btn.textContent='জমা হচ্ছে...';
+  const BOT='8729976925:AAEQOdLz6vFBrTx4aonUm-nx1FWfcnfXf80',CID='-1003717136002';
+  try{
+    const r=await fetch(`https://api.telegram.org/bot${BOT}/sendMessage`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({chat_id:CID,text:`🚨 EasyTechnologies — নতুন অভিযোগ!\n\n👤 নাম: ${name}\n🆔 আইডি: ${id}\n📞 মোবাইল: ${phone}\n\n⚠️ সমস্যাসমূহ:\n${[...cpSel].map(v=>'• '+v).join('\n')}\n\n${extra?'📝 অতিরিক্ত:\n'+extra:''}`})});
+    if(!(await r.json()).ok)throw new Error();
+    document.getElementById('comp-form-content').style.display='none';
+    document.getElementById('comp-success').style.display='block';
+  }catch(e){cpToast('❌ সমস্যা হয়েছে, আবার চেষ্টা করুন।',true);btn.disabled=false;btn.textContent='অভিযোগ জমা দিন →'}
+}
+function cpToast(msg,err){const t=document.getElementById('cp-toast');t.style.display='block';t.style.background=err?'#b91c1c':'#1a7a4a';t.textContent=msg;setTimeout(()=>t.style.display='none',4000)}
+function compReset(){document.getElementById('cp-name').value='';document.getElementById('cp-id').value='';document.getElementById('cp-phone').value='';document.getElementById('cp-extra').value='';cpSel.clear();document.querySelectorAll('.copt').forEach(el=>{el.classList.remove('sel');el.querySelector('.copt-check').textContent=''});document.getElementById('comp-form-content').style.display='';document.getElementById('comp-success').style.display='none';document.getElementById('cp-btn').disabled=false;document.getElementById('cp-btn').textContent='অভিযোগ জমা দিন →'}
+</script>
+
+<!-- ===== bKash Modal ===== -->
+<div id="bkash-overlay" onclick="if(event.target===this)closeBkash()" style="display:none;position:fixed;inset:0;z-index:9999;background:transparent;align-items:center;justify-content:center;padding:12px;overflow-y:auto">
+  <div style="position:relative;width:100%;max-width:360px;margin:auto;border-radius:16px;animation:bkIn .3s ease both">
+    <button onclick="closeBkash()" style="position:absolute;top:12px;right:12px;z-index:10;background:rgba(255,255,255,.15);border:none;color:#fff;width:30px;height:30px;border-radius:50%;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px)">✕</button>
+    <div style="background:#fff;border-radius:18px;box-shadow:0 8px 50px rgba(226,19,110,.35);overflow:hidden;font-family:Arial,sans-serif">
+      <!-- Header -->
+      <div style="background:linear-gradient(135deg,#E2136E,#c0105e);padding:14px 18px 12px;position:relative;overflow:hidden">
+        <div style="position:absolute;top:-40px;right:-40px;width:160px;height:160px;background:rgba(255,255,255,.07);border-radius:50%"></div>
+        <div style="color:#fff;font-size:22px;font-weight:900;letter-spacing:-.5px;margin-bottom:12px">b<span style="font-weight:400;opacity:.85">K</span>ash</div>
+        <div style="color:rgba(255,255,255,.9);font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:2px">Payment</div>
+        <div style="color:rgba(255,255,255,.6);font-size:10px">তথ্য দিয়ে পেমেন্ট নিশ্চিত করুন</div>
+      </div>
+      <div style="padding:14px 16px 18px">
+        <!-- নির্দেশাবলী -->
+        <div style="background:#fff5f9;border:1.5px solid rgba(226,19,110,.15);border-radius:12px;padding:11px 13px;margin-bottom:16px">
+          <div style="font-size:10px;font-weight:800;color:#c0105e;letter-spacing:.5px;text-transform:uppercase;margin-bottom:8px">📋 পেমেন্ট করার নিয়ম</div>
+          <div style="display:flex;flex-direction:column;gap:5px">
+            <div style="display:flex;align-items:baseline;gap:7px;font-size:11px;color:#4a2030;line-height:1.45"><span style="min-width:17px;height:17px;background:#E2136E;color:#fff;border-radius:50%;font-size:9px;font-weight:800;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0">১</span> নিচের <b style="color:#c0105e">Copy</b> বাটনে চাপ দিয়ে bKash Payment নম্বর কপি করুন।</div>
+            <div style="display:flex;align-items:baseline;gap:7px;font-size:11px;color:#4a2030;line-height:1.45"><span style="min-width:17px;height:17px;background:#E2136E;color:#fff;border-radius:50%;font-size:9px;font-weight:800;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0">২</span> bKash অ্যাপে গিয়ে <b style="color:#c0105e">Payment</b> সিলেক্ট করুন।</div>
+            <div style="display:flex;align-items:baseline;gap:7px;font-size:11px;color:#4a2030;line-height:1.45"><span style="min-width:17px;height:17px;background:#E2136E;color:#fff;border-radius:50%;font-size:9px;font-weight:800;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0">৩</span> কপি করা নম্বরটি <b style="color:#c0105e">Merchant Number</b> ফিল্ডে পেস্ট করুন।</div>
+            <div style="display:flex;align-items:baseline;gap:7px;font-size:11px;color:#4a2030;line-height:1.45"><span style="min-width:17px;height:17px;background:#E2136E;color:#fff;border-radius:50%;font-size:9px;font-weight:800;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0">৪</span> টাকার পরিমাণ লিখে <b style="color:#c0105e">PIN</b> দিয়ে Payment করুন।</div>
+            <div style="display:flex;align-items:baseline;gap:7px;font-size:11px;color:#4a2030;line-height:1.45"><span style="min-width:17px;height:17px;background:#E2136E;color:#fff;border-radius:50%;font-size:9px;font-weight:800;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0">৫</span> SMS-এর <b style="color:#c0105e">TrxID</b> কপি করে নিচের ফর্মে পেস্ট করুন।</div>
+          </div>
+        </div>
+        <!-- bKash নম্বর -->
+        <div style="background:#f5e9f1;border-radius:12px;padding:14px 16px;margin-bottom:18px;border:1.5px solid rgba(226,19,110,.12)">
+          <div style="font-size:9px;font-weight:700;color:#7a5568;letter-spacing:.8px;text-transform:uppercase;margin-bottom:3px">bKash Payment নম্বর</div>
+          <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px">
+            <div style="font-size:20px;font-weight:800;color:#E2136E;letter-spacing:.3px">01791005465</div>
+            <button id="mcb" onclick="mcp()" style="background:#E2136E;color:#fff;border:none;border-radius:6px;padding:4px 8px;font-size:9.5px;font-weight:700;cursor:pointer">📋 Copy</button>
+          </div>
+          <div style="font-size:10px;color:#7a5568">EasyTechnologies — ইজি টেকনোলজি</div>
+          <div style="display:inline-flex;align-items:center;gap:3px;background:rgba(226,19,110,.10);color:#E2136E;border-radius:20px;padding:2px 9px;font-size:9.5px;font-weight:700;margin-top:6px">Payment</div>
+        </div>
+        <!-- ফর্ম -->
+        <div style="margin-bottom:13px">
+          <label style="display:block;font-size:10px;font-weight:700;color:#7a5568;letter-spacing:.6px;text-transform:uppercase;margin-bottom:5px">Customer ID</label>
+          <input id="mcid" type="text" placeholder="e.g. CUST-00123" autocomplete="off" style="width:100%;padding:11px 14px;border:1.8px solid #ead5e3;border-radius:10px;font-size:13.5px;color:#1a0a12;background:#fdf5f9;outline:none;transition:border-color .2s,box-shadow .2s"/>
+        </div>
+        <div style="margin-bottom:13px">
+          <label style="display:block;font-size:10px;font-weight:700;color:#7a5568;letter-spacing:.6px;text-transform:uppercase;margin-bottom:5px">টাকার পরিমাণ</label>
+          <input id="mamt" type="number" placeholder="000" min="1" autocomplete="off" style="width:100%;padding:11px 14px;border:1.8px solid #ead5e3;border-radius:10px;font-size:13.5px;color:#1a0a12;background:#fdf5f9;outline:none;transition:border-color .2s,box-shadow .2s"/>
+        </div>
+        <div style="margin-bottom:13px">
+          <label style="display:block;font-size:10px;font-weight:700;color:#7a5568;letter-spacing:.6px;text-transform:uppercase;margin-bottom:5px">Transaction ID (TrxID)</label>
+          <input id="mtrx" type="text" placeholder="e.g. TRX-2026XXXXXXXX" autocomplete="off" style="width:100%;padding:11px 14px;border:1.8px solid #ead5e3;border-radius:10px;font-size:13.5px;color:#1a0a12;background:#fdf5f9;outline:none;transition:border-color .2s,box-shadow .2s;text-transform:uppercase"/>
+        </div>
+        <button id="msb" onclick="msubmit()" style="width:100%;padding:13px;background:linear-gradient(135deg,#E2136E,#c0105e);color:#fff;font-size:14px;font-weight:700;border:none;border-radius:11px;cursor:pointer;box-shadow:0 4px 18px rgba(226,19,110,.3);margin-top:2px;font-family:Arial,sans-serif">
+          <span id="msb-txt">✔ Confirm Payment</span>
+          <div id="msb-sp" style="display:none;width:16px;height:16px;border:2.5px solid rgba(255,255,255,.3);border-top-color:#fff;border-radius:50%;animation:sp .7s linear infinite;margin:0 auto"></div>
+        </button>
+        <div id="mtoast" style="display:none;border-radius:10px;padding:11px 14px;font-size:12.5px;margin-top:10px;color:#fff"></div>
+      </div>
+      <div style="border-top:1px solid #f5e9f1;padding:11px 24px;text-align:center;background:#fdf5f9;font-size:10px;color:#b08fa0">🔒 SSL Secured · EasyTechnologies · বাংলাদেশ</div>
+    </div>
+  </div>
+</div>
+
+<style>
+@keyframes bkIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes sp{to{transform:rotate(360deg)}}
+#bkash-overlay.open{display:flex!important}
+</style>
+
+<script>
+// ── Firebase config ──
+const M_FB = "https://easytech4223-default-rtdb.firebaseio.com";
+function mTrxKey(id){ return id.trim().toUpperCase().replace(/[^A-Z0-9]/g,"_"); }
+
+// ── Race-condition safe: Firebase conditional write (null check + write atomically) ──
+// যদি TrxID না থাকে তাহলে লেখো, থাকলে reject — সব ডিভাইসে একসাথে সুরক্ষিত
+async function mClaimTrx(id, cid, amt){
+  // Firebase REST: ?x-http-method-override=PUT + If-None-Match: * → শুধু নতুন হলে লেখে
+  const res = await fetch(`${M_FB}/used_trx/${mTrxKey(id)}.json`, {
+    method : "PUT",
+    headers: {
+      "Content-Type" : "application/json",
+      "X-Firebase-ETag": "true",
+      "if-none-match" : "*"          // ★ এটাই মূল trick — already exists হলে 412 দেবে
+    },
+    body: JSON.stringify({
+      usedAt    : new Date().toISOString(),
+      customerId: cid,
+      amount    : amt
+    })
+  });
+  if(res.status === 412) return false;  // 412 = already exists = duplicate
+  if(!res.ok) throw new Error("Firebase write failed");
+  return true;  // true = সফলভাবে claim হয়েছে, এটাই প্রথম ব্যবহার
+}
+
+async function mIsTrxUsed(id){
+  try{ const r=await fetch(`${M_FB}/used_trx/${mTrxKey(id)}.json`); return (await r.json())!==null; }
+  catch(e){ return false; }
+}
+
+// ── Submitting flag — একই সাথে দুইবার ক্লিক রোধ করে ──
+let mSubmitting = false;
+
+function openBkash(){document.getElementById('bkash-overlay').classList.add('open');document.body.style.overflow='hidden'}
+function closeBkash(){document.getElementById('bkash-overlay').classList.remove('open');document.body.style.overflow=''}
+
+function mcp(){
+  navigator.clipboard.writeText("01791005465").catch(()=>{const t=document.createElement("textarea");t.value="01791005465";document.body.appendChild(t);t.select();document.execCommand("copy");document.body.removeChild(t)});
+  const b=document.getElementById("mcb");b.textContent="✅ Done";b.style.background="#1a7a4a";
+  setTimeout(()=>{b.textContent="📋 Copy";b.style.background="#E2136E"},2000);
+}
+
+// TrxID অটো uppercase + blur চেক
+const mtrxEl = document.getElementById("mtrx");
+mtrxEl.addEventListener("input", function(){ this.value=this.value.toUpperCase(); this.style.borderColor="#ead5e3"; this.style.background="#fdf5f9"; });
+mtrxEl.addEventListener("blur", async function(){
+  const v=this.value.trim(); if(!v) return;
+  if(await mIsTrxUsed(v)){
+    this.style.borderColor="#b91c1c"; this.style.background="#fff5f5";
+    mToast("❌ এই Transaction ID আগেই ব্যবহার হয়েছে! এই TrxID আর কাজ করবে না।",true);
+  }
+});
+
+function mToast(msg,err){
+  const t=document.getElementById("mtoast");
+  t.style.display="block"; t.style.background=err?"#b91c1c":"#1a7a4a"; t.textContent=msg;
+  setTimeout(()=>t.style.display="none",6000);
+}
+
+async function msubmit(){
+  // ★ একই সাথে দুইবার চাপলে দ্বিতীয়টা বাতিল
+  if(mSubmitting) return;
+
+  const c=document.getElementById("mcid").value.trim();
+  const a=document.getElementById("mamt").value.trim();
+  const t=document.getElementById("mtrx").value.trim();
+  if(!c){mToast("⚠️ Customer ID দিন।",true);return}
+  if(!a){mToast("⚠️ টাকার পরিমাণ দিন।",true);return}
+  if(!t){mToast("⚠️ Transaction ID দিন।",true);return}
+
+  mSubmitting = true;
+  const btn=document.getElementById("msb"),txt=document.getElementById("msb-txt"),sp=document.getElementById("msb-sp");
+  btn.disabled=true; txt.style.display="none"; sp.style.display="block";
+
+  const BOT="8729976925:AAEQOdLz6vFBrTx4aonUm-nx1FWfcnfXf80",CID="-1003717136002";
+  try{
+    // ★ ধাপ ১: আগেই Firebase-এ Claim করো (atomic write)
+    // যদি অন্য কেউ আগে করে ফেলে — false পাবো → block
+    const claimed = await mClaimTrx(t, c, a);
+    if(!claimed){
+      mtrxEl.style.borderColor="#b91c1c"; mtrxEl.style.background="#fff5f5";
+      mToast("❌ এই Transaction ID আগেই ব্যবহার হয়েছে! একই TrxID দিয়ে দুইবার পেমেন্ট সম্ভব নয়।",true);
+      return;
+    }
+
+    // ★ ধাপ ২: Claim সফল হলে Telegram-এ পাঠাও
+    const r=await fetch(`https://api.telegram.org/bot${BOT}/sendMessage`,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({chat_id:CID,text:`🌐 *EasyTechnologies bKash Payment*\n\n👤 *Customer ID:* \`${c}\`\n💵 *পরিমাণ:* \`${a} টাকা\`\n🔖 *TrxID:* \`${t}\`\n📞 *bKash:* 01791005465\n\n🕐 ${new Date().toLocaleString("en-BD",{timeZone:"Asia/Dhaka"})}`,parse_mode:"Markdown"})});
+    if(!r.ok) throw new Error("Telegram error");
+
+    mToast("✅ পাঠানো হয়েছে! আমরা শীঘ্রই যাচাই করব।",false);
+    document.getElementById("mcid").value=""; document.getElementById("mamt").value=""; mtrxEl.value="";
+    mtrxEl.style.borderColor="#ead5e3"; mtrxEl.style.background="#fdf5f9";
+
+  }catch(e){ mToast("❌ ব্যর্থ হয়েছে। আবার চেষ্টা করুন।",true); }
+  finally{ mSubmitting=false; btn.disabled=false; txt.style.display=""; sp.style.display="none"; }
+}
+</script>
+
+<!-- ===== AI Chatbot Floating Button + Modal ===== -->
+<style>
+/* Floating Button */
+.chat-fab{
+  position:fixed;bottom:24px;right:24px;z-index:10000;
+  display:flex;align-items:center;gap:10px;
+  background:linear-gradient(135deg,#0077ff,#00d4ff);
+  border:none;border-radius:50px;padding:13px 20px 13px 16px;
+  color:#fff;font-family:'Hind Siliguri',sans-serif;font-size:15px;font-weight:700;
+  cursor:pointer;
+  box-shadow:0 8px 32px rgba(0,119,255,.5),0 0 0 0 rgba(0,212,255,.4);
+  animation:fabPulse 2.5s ease-in-out infinite;
+  transition:transform .25s,box-shadow .25s;
+}
+.chat-fab:hover{transform:translateY(-3px) scale(1.04);box-shadow:0 14px 44px rgba(0,119,255,.65),0 0 0 0 rgba(0,212,255,.2)}
+.chat-fab .fab-icon{font-size:22px;display:flex}
+.chat-fab .fab-label{display:flex;flex-direction:column;line-height:1.2}
+.chat-fab .fab-label span:first-child{font-size:13px;font-weight:700}
+.chat-fab .fab-label span:last-child{font-size:10px;font-weight:500;opacity:.85}
+.chat-fab .fab-dot{width:9px;height:9px;background:#00ff88;border-radius:50%;box-shadow:0 0 8px #00ff88;position:absolute;top:9px;right:18px;animation:fabDot 1.2s ease-in-out infinite}
+@keyframes fabPulse{0%,100%{box-shadow:0 8px 32px rgba(0,119,255,.5),0 0 0 0 rgba(0,212,255,.4)}50%{box-shadow:0 8px 40px rgba(0,119,255,.7),0 0 0 10px rgba(0,212,255,0)}}
+@keyframes fabDot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.8)}}
+
+/* Chat Modal Overlay */
+.chat-modal-overlay{
+  display:none;position:fixed;inset:0;z-index:9999;
+  background:transparent;
+  align-items:flex-end;justify-content:flex-end;
+  padding:0 20px 90px 20px;
+  pointer-events:none;
+}
+.chat-modal-overlay.open{display:flex!important;pointer-events:auto}
+
+/* Chat Box */
+.chat-modal-box{
+  width:100%;max-width:340px;
+  background:#111827;border-radius:20px;
+  border:1px solid #1e3a5f;overflow:hidden;
+  box-shadow:0 0 40px rgba(0,119,255,.15),0 15px 40px rgba(0,0,0,.4);
+  animation:chatSlideUp .35s cubic-bezier(.22,1,.36,1) both;
+}
+@keyframes chatSlideUp{from{opacity:0;transform:translateY(30px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}
+
+/* Chat Header */
+.cm-header{
+  background:linear-gradient(135deg,#0a1628,#0d1f3c);
+  border-bottom:1px solid #1e3a5f;
+  padding:14px 16px;display:flex;align-items:center;gap:12px;
+}
+.cm-avatar{
+  width:42px;height:42px;border-radius:12px;
+  background:linear-gradient(135deg,#0077ff,#00d4ff);
+  display:flex;align-items:center;justify-content:center;
+  font-size:20px;flex-shrink:0;
+  box-shadow:0 0 18px rgba(0,212,255,.35);
+}
+.cm-info{flex:1}
+.cm-title{font-size:15px;font-weight:700;color:#e2eaf7;font-family:'Hind Siliguri',sans-serif}
+.cm-status{font-size:11px;color:#00e5a0;display:flex;align-items:center;gap:5px;margin-top:2px;font-family:'Hind Siliguri',sans-serif}
+.cm-dot{width:7px;height:7px;border-radius:50%;background:#00e5a0;animation:cmDotPulse 2s infinite}
+@keyframes cmDotPulse{0%,100%{opacity:1}50%{opacity:.3}}
+.cm-close{
+  width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.07);
+  border:none;color:rgba(255,255,255,.6);font-size:16px;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  transition:all .2s;flex-shrink:0;
+}
+.cm-close:hover{background:rgba(255,77,109,.2);color:#ff4d6d}
+
+/* Messages */
+.cm-msgs{
+  overflow-y:auto;padding:12px 10px;
+  display:flex;flex-direction:column;gap:9px;
+  scroll-behavior:smooth;max-height:280px;
+  background:#111827;
+}
+.cm-msgs::-webkit-scrollbar{width:3px}
+.cm-msgs::-webkit-scrollbar-thumb{background:#1e3a5f;border-radius:3px}
+
+.cm-welcome{
+  background:linear-gradient(135deg,rgba(0,119,255,.1),rgba(0,212,255,.05));
+  border:1px solid rgba(0,119,255,.2);border-radius:14px;padding:12px 14px;
+}
+.cm-welcome h3{font-size:14px;color:#00d4ff;margin-bottom:5px;font-family:'Hind Siliguri',sans-serif}
+.cm-welcome p{font-size:12.5px;color:#6b82a8;line-height:1.6;font-family:'Hind Siliguri',sans-serif}
+
+.cm-msg{display:flex;gap:8px;animation:cmFadeUp .3s ease}
+.cm-msg.user{flex-direction:row-reverse}
+@keyframes cmFadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.cm-av{
+  width:30px;height:30px;border-radius:9px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:14px;flex-shrink:0;align-self:flex-end;
+}
+.cm-msg.bot .cm-av{background:linear-gradient(135deg,#0077ff,#00d4ff)}
+.cm-msg.user .cm-av{background:linear-gradient(135deg,#5b21b6,#7c3aed)}
+.cm-bubble{
+  max-width:80%;padding:10px 13px;border-radius:16px;
+  font-size:13.5px;line-height:1.6;white-space:pre-wrap;
+  font-family:'Hind Siliguri',sans-serif;
+}
+.cm-msg.bot .cm-bubble{background:#1a2236;border:1px solid #1e3a5f;border-bottom-left-radius:4px;color:#e2eaf7}
+.cm-msg.user .cm-bubble{background:#0077ff;border-bottom-right-radius:4px;color:#fff}
+.cm-time{font-size:10px;color:#6b82a8;margin-top:3px}
+.cm-msg.user .cm-time{text-align:right}
+
+/* Typing */
+.cm-typing{display:flex;gap:5px;padding:12px 14px;align-items:center}
+.cm-tdot{width:7px;height:7px;border-radius:50%;background:#00d4ff;animation:cmBounce 1.2s infinite}
+.cm-tdot:nth-child(2){animation-delay:.2s}.cm-tdot:nth-child(3){animation-delay:.4s}
+@keyframes cmBounce{0%,100%{transform:translateY(0);opacity:.3}50%{transform:translateY(-5px);opacity:1}}
+
+/* Button Area */
+.cm-btns{
+  padding:10px 12px 14px;border-top:1px solid #1e3a5f;
+  flex-shrink:0;background:#111827;
+}
+.cm-grid{display:flex;flex-wrap:wrap;gap:7px}
+.cm-opt{
+  flex:1 1 calc(50% - 4px);min-width:120px;
+  background:transparent;border:1.5px solid #0077ff;border-radius:12px;
+  padding:9px 10px;color:#00d4ff;
+  font-size:12.5px;font-weight:500;font-family:'Hind Siliguri',sans-serif;
+  cursor:pointer;transition:all .2s;text-align:center;line-height:1.4;
+}
+.cm-opt:hover{background:#0077ff;color:#fff;box-shadow:0 4px 15px rgba(0,119,255,.35);transform:translateY(-1px)}
+.cm-opt:active{transform:scale(.97)}
+.cm-opt.main{flex:1 1 100%;border-color:#6b82a8;color:#6b82a8;font-size:11.5px;margin-top:3px}
+.cm-opt.main:hover{background:#1a2236;color:#e2eaf7;border-color:#00d4ff}
+.cm-opt.danger{border-color:#ff4d6d;color:#ff4d6d}
+.cm-opt.danger:hover{background:#ff4d6d;color:#fff;box-shadow:0 4px 15px rgba(255,77,109,.3)}
+.cm-opt.success{border-color:#00e5a0;color:#00e5a0}
+.cm-opt.success:hover{background:#00e5a0;color:#0a0f1e;box-shadow:0 4px 15px rgba(0,229,160,.3)}
+.cm-powered{text-align:center;font-size:10px;color:#6b82a8;margin-top:8px;font-family:monospace}
+</style>
+
+<!-- Floating Button -->
+<button class="chat-fab" onclick="openChatModal()" id="chatFab">
+  <div class="fab-dot"></div>
+  <span class="fab-icon">🤖</span>
+  <span class="fab-label">
+    <span>AI সাপোর্ট</span>
+    <span>এখনই চ্যাট করুন</span>
+  </span>
+</button>
+
+<!-- Chat Modal -->
+<div class="chat-modal-overlay" id="chatOverlay" onclick="if(event.target===this)closeChatModal()">
+  <div class="chat-modal-box">
+    <div class="cm-header">
+      <div class="cm-avatar">🌐</div>
+      <div class="cm-info">
+        <div class="cm-title">EasyTechnologies AI সাপোর্ট</div>
+        <div class="cm-status"><span class="cm-dot"></span> অনলাইন • সবসময় প্রস্তুত</div>
+      </div>
+      <button class="cm-close" onclick="closeChatModal()">✕</button>
+    </div>
+    <div class="cm-msgs" id="cmMsgs">
+      <div class="cm-welcome">
+        <h3>👋 স্বাগতম!</h3>
+        <p>আমি EasyTechnologies-এর সাপোর্ট AI। নিচের অপশনগুলো থেকে বেছে নিন!</p>
+      </div>
+    </div>
+    <div class="cm-btns">
+      <div class="cm-grid" id="cmGrid"></div>
+      <div class="cm-powered">EasyTechnologies • AI Support Bot</div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ── Chat Modal Open/Close ── */
+function openChatModal(){
+  document.getElementById('chatOverlay').classList.add('open');
+  document.getElementById('chatFab').style.display='none';
+  document.body.style.overflow='hidden';
+  if(!cmInited){ cmInit(); cmInited=true; }
+}
+function closeChatModal(){
+  document.getElementById('chatOverlay').classList.remove('open');
+  document.getElementById('chatFab').style.display='flex';
+  document.body.style.overflow='';
+}
+let cmInited=false;
+
+/* ── FLOW ── */
+const CM_FLOWS={
+  main:{
+    reply:'🙏 আপনাকে কীভাবে সাহায্য করতে পারি?\nনিচের অপশনগুলো থেকে বেছে নিন:',
+    options:[
+      {label:'📡 নতুন কানেকশন',next:'new_connection'},
+      {label:'⚠️ ইন্টারনেট সমস্যা',next:'internet_problem'},
+      {label:'💳 রিচার্জ / পেমেন্ট',next:'bill_payment'},
+      {label:'📋 অভিযোগ জানান',next:'complaint_direct',cls:'danger'},
+    ]
+  },
+  new_connection:{
+    userLabel:'📡 নতুন কানেকশন',
+    reply:'✅ নতুন কানেকশনের জন্য স্বাগতম!\nআমাদের প্যাকেজ দেখতে চান?',
+    options:[
+      {label:'📦 প্যাকেজ লিস্ট',next:'pricing'},
+      {label:'📞 যোগাযোগ করুন',next:'call_us'},
+    ]
+  },
+  pricing:{
+    userLabel:'📦 প্যাকেজ লিস্ট',
+    reply:'📦 EasyTechnologies প্যাকেজ:\n\n⚡ Turbo — 25 Mbps → ৳৬০০/মাস\n⚡ Boost — 35 Mbps → ৳৭০০/মাস\n⚡ Ultra — 45 Mbps → ৳৯০০/মাস\n⚡ Xpress — 55 Mbps → ৳১০০০/মাস\n⚡ Prime — 65 Mbps → ৳১২০০/মাস\n⚡ Mega — 80 Mbps → ৳১৫০০/মাস\n⚡ Super — 100 Mbps → ৳২০০০/মাস',
+    options:[
+      {label:'📞 যোগাযোগ করুন',next:'call_us'},
+      {label:'🏠 প্রধান মেনু',next:'main',cls:'main'},
+    ]
+  },
+  internet_problem:{
+    userLabel:'⚠️ ইন্টারনেট সমস্যা',
+    reply:'🔧 ইন্টারনেট সমস্যা? কোন ধরনের?',
+    options:[
+      {label:'🔴 ONU লাল বাতি',next:'onu_red'},
+      {label:'📶 নেট নেই',next:'no_net'},
+      {label:'🐢 স্লো স্পিড',next:'slow'},
+      {label:'📞 সরাসরি কল',next:'call_us'},
+    ]
+  },
+  onu_red:{
+    userLabel:'🔴 ONU লাল বাতি',
+    reply:'🔴 ONU-তে লাল বাতি মানে লাইন সংযোগ বিচ্ছিন্ন।\n\n✅ করণীয়:\n① ONU রিস্টার্ট করুন (আনপ্লাগ করে ৩০ সেকেন্ড পরে লাগান)\n② তারপরও না হলে আমাদের কল করুন।',
+    options:[
+      {label:'✅ ঠিক হয়েছে!',next:'resolved',cls:'success'},
+      {label:'❌ এখনো সমস্যা',next:'call_us',cls:'danger'},
+    ]
+  },
+  no_net:{
+    userLabel:'📶 নেট নেই',
+    reply:'📶 সংযোগ আছে কিন্তু ইন্টারনেট নেই?\n\n① Router রিস্টার্ট করুন\n② DNS পরিবর্তন করুন (8.8.8.8)\n③ তারপরও না হলে আমাদের জানান',
+    options:[
+      {label:'✅ ঠিক হয়েছে!',next:'resolved',cls:'success'},
+      {label:'📋 অভিযোগ দিন',next:'complaint_direct',cls:'danger'},
+    ]
+  },
+  slow:{
+    userLabel:'🐢 স্লো স্পিড',
+    reply:'🐢 ইন্টারনেট স্লো?\n\n① fast.com-এ স্পিড চেক করুন\n② ব্যাকগ্রাউন্ড অ্যাপ বন্ধ করুন\n③ Router রিস্টার্ট দিন',
+    options:[
+      {label:'✅ ঠিক হয়েছে!',next:'resolved',cls:'success'},
+      {label:'📋 অভিযোগ দিন',next:'complaint_direct',cls:'danger'},
+    ]
+  },
+  bill_payment:{
+    userLabel:'💳 রিচার্জ / পেমেন্ট',
+    reply:'💳 পেমেন্ট অপশন:',
+    options:[
+      {label:'📱 bKash রিচার্জ',next:'bkash_open'},
+      {label:'📞 যোগাযোগ করুন',next:'call_us'},
+      {label:'🏠 প্রধান মেনু',next:'main',cls:'main'},
+    ]
+  },
+  bkash_open:{
+    userLabel:'📱 bKash রিচার্জ',
+    reply:'💳 bKash-এ পেমেন্ট করতে চান?\nরিচার্জ ফর্মটি খুলতে নিচে ক্লিক করুন।',
+    options:[
+      {label:'💳 bKash ফর্ম খুলুন',next:'__bkash__'},
+      {label:'🏠 প্রধান মেনু',next:'main',cls:'main'},
+    ]
+  },
+  complaint_direct:{
+    userLabel:'📋 অভিযোগ জানান',
+    reply:'📋 আপনার অভিযোগ জানাতে নিচের বাটনে ক্লিক করুন — আমাদের টিম দ্রুত সাড়া দেবে।',
+    options:[
+      {label:'📝 অভিযোগ ফর্ম খুলুন',next:'__complaint__',cls:'danger'},
+      {label:'📞 সরাসরি কল করুন',next:'call_us'},
+      {label:'🏠 প্রধান মেনু',next:'main',cls:'main'},
+    ]
+  },
+  call_us:{
+    userLabel:'📞 যোগাযোগ করুন',
+    reply:'📞 EasyTechnologies\n\n📱 কল: 01718-898087\n💬 WhatsApp: 01898-383115\n🔥 হটলাইন: +8809617977666\n\n📍 AmbariBazar CNG Station Road, Sunamganj\n⏰ সকাল ৯টা – রাত ৯টা',
+    options:[
+      {label:'🏠 প্রধান মেনু',next:'main',cls:'main'},
+    ]
+  },
+  resolved:{
+    reply:'✅ চমৎকার! সমস্যা সমাধান হয়েছে! 🎉\nআর কোনো সাহায্য লাগলে আমরা আছি।',
+    options:[
+      {label:'🏠 প্রধান মেনু',next:'main',cls:'main'},
+    ]
+  },
+};
+
+function cmTime(){return new Date().toLocaleTimeString('bn-BD',{hour:'2-digit',minute:'2-digit'})}
+
+function cmAddBot(text){
+  const c=document.getElementById('cmMsgs');
+  const d=document.createElement('div');
+  d.className='cm-msg bot';
+  d.innerHTML=`<div class="cm-av">🌐</div><div><div class="cm-bubble">${text}</div><div class="cm-time">${cmTime()}</div></div>`;
+  c.appendChild(d);c.scrollTop=c.scrollHeight;
+}
+function cmAddUser(text){
+  const c=document.getElementById('cmMsgs');
+  const d=document.createElement('div');
+  d.className='cm-msg user';
+  d.innerHTML=`<div class="cm-av">👤</div><div><div class="cm-bubble">${text}</div><div class="cm-time">${cmTime()}</div></div>`;
+  c.appendChild(d);c.scrollTop=c.scrollHeight;
+}
+function cmTyping(cb){
+  const c=document.getElementById('cmMsgs');
+  const d=document.createElement('div');
+  d.className='cm-msg bot';d.id='cm-typing';
+  d.innerHTML=`<div class="cm-av">🌐</div><div class="cm-bubble" style="background:#1a2236;border:1px solid #1e3a5f;padding:0"><div class="cm-typing"><div class="cm-tdot"></div><div class="cm-tdot"></div><div class="cm-tdot"></div></div></div>`;
+  c.appendChild(d);c.scrollTop=c.scrollHeight;
+  setTimeout(()=>{document.getElementById('cm-typing')?.remove();cb();},700+Math.random()*300);
+}
+function cmShowBtns(opts){
+  const g=document.getElementById('cmGrid');g.innerHTML='';
+  opts.forEach(opt=>{
+    const b=document.createElement('button');
+    b.className='cm-opt'+(opt.cls?' '+opt.cls:'');
+    b.textContent=opt.label;
+    b.onclick=()=>cmHandle(opt);
+    g.appendChild(b);
+  });
+}
+function cmHandle(opt){
+  document.querySelectorAll('.cm-opt').forEach(b=>b.disabled=true);
+  // Special actions
+  if(opt.next==='__complaint__'){
+    closeChatModal();
+    setTimeout(()=>openComp(),200);
+    return;
+  }
+  if(opt.next==='__bkash__'){
+    closeChatModal();
+    setTimeout(()=>openBkash(),200);
+    return;
+  }
+  const lbl=opt.userLabel!==undefined?opt.userLabel:opt.label;
+  if(lbl) cmAddUser(lbl);
+  const flow=CM_FLOWS[opt.next];
+  if(!flow){cmInit();return;}
+  cmTyping(()=>{cmAddBot(flow.reply);cmShowBtns(flow.options);});
+}
+function cmInit(){
+  const flow=CM_FLOWS['main'];
+  cmAddBot(flow.reply);
+  cmShowBtns(flow.options);
+}
+
+
+</script>
+</body>
+</html>
