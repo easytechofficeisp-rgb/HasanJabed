@@ -84,22 +84,6 @@ html,body{
 .bg-tint{position:fixed;inset:0;z-index:-5;background:rgba(2,8,12,.62);pointer-events:none}
 
 /* =========================================
-   NOTICE BAR
-   ========================================= */
-.notice-bar{
-  background:rgba(37,211,102,.07);
-  border-bottom:1px solid rgba(37,211,102,.2);
-  padding:8px 0;overflow:hidden;white-space:nowrap;
-  position:relative;z-index:1;
-}
-.notice-inner{
-  display:inline-block;
-  animation:marquee 24s linear infinite;
-  color:rgba(0,255,136,.9);font-size:12px;font-weight:600;letter-spacing:.5px;
-}
-@keyframes marquee{from{transform:translateX(100vw)}to{transform:translateX(-100%)}}
-
-/* =========================================
    LAYOUT
    ========================================= */
 .pg{max-width:820px;margin:0 auto;position:relative;z-index:1}
